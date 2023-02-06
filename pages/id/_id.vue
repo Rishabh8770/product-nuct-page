@@ -17,12 +17,9 @@
 <script>
 export default {
   async asyncData ({ params }) {
-    // console.log("params", this.params)
     const details = await fetch(
       `https://dummyjson.com/products/${params.id}`
     ).then(res => res.json())
-    // this.details = details
-    // console.log('details', details)
     return { details }
   }
 }
